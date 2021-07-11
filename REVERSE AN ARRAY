@@ -1,0 +1,36 @@
+#include <stdio.h>
+
+void reverse(int a[],int n)
+{
+   int low=0;
+   int high=n-1;
+   int t;
+   
+   while(low<high)
+   {
+       t=a[low];
+       a[low]=a[high];
+       a[high]=t;
+       low++;
+       high--;
+   }
+       
+}
+
+int main()
+{
+    int n,a[1000],i;
+    scanf("%d",&n);
+    for(i=0;i<n;i++)
+    {
+        scanf("%d",&a[i]);
+    }
+    
+    reverse(a,n);
+    
+    for(i=0;i<n;i++)
+    {
+    printf("%d ",a[i]);
+    }
+    return 0;
+}
